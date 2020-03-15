@@ -1,0 +1,76 @@
+CIS 432 � Introduction to Computer Networks
+Programming Assignment 01 � Undergraduate Students
+
+
+Please fill this form and send it together with your program.
+Put all the source files, makefile and this text file into a folder by the lastname of one of the group members (all lowercase letters),
+compress it into a tarball, gz or zip and send using TurnIN Homework page.
+(https://systems.cs.uoregon.edu/apps/turnin.php)
+Please include any special instructions for compiling and running your program on ix.
+
+Student Names: Logan Poole
+Student IDs: 951529200
+
+Answer the questions by selecting one of the given options. You may add additional information if you wish to.
+
+
+Client Program
+--------------
+
+- Does the client compile and run? yes/no
+*Yes
+- Do login and logout work? yes/no
+*Yes
+- Does the client accept user commands? yes/no
+*Yes
+Please specify which of the following features work
+
+    - Join: works/doesn't work
+      *Works
+    - Leave: works/doesn't work
+      *Works
+    - Say: works/doesn't work
+      *Works
+    - Switch: works/doesn't work
+      *Works
+    - List: works/doesn't work
+      *Works
+    - Who: works/doesn't work
+      *Works
+
+- Does the client send Keep Alive message when needed (for extra credit)? yes/no
+*No; Did not implement feature
+- Does the client send Keep Alive message when not needed (for extra credit)? yes/no
+*No; Did not implement feature
+- Can the client handle messages that are out of order(e.g. /leave before a /join)? yes/no
+*Yes; trying to /leave a channel a client isn't subscribed raises an error as
+well as trying to /switch to an unsubscribed channel
+- Can the client redisplay the prompt and user input when a message from the
+server is received while the user is typing (for extra credit)? yes/no
+*Yes; I believe it does, the server sends messages that display to the user and
+the user can still input but I don't redisplay the prompt, it persists through error messages
+Server Program
+-------------
+
+- Does the server compile and run? yes/no
+*Yes
+- Does the server accept client requests? yes/no
+*Yes
+- Do Login and Logout work? yes/no
+*Yes
+Please specify which of the following features work
+
+    - Join: works/doesn't work
+      *Works
+    - Leave: works/doesn't work
+      *Works
+    - Say: works/doesn't work
+      *Works
+    - List: works/doesn't work
+      *Works
+    - Who: works/doesn't work
+      *Works
+- Does the server timeout users correctly (for extra credit)? yes/no
+*No; Did not implement feature
+- Can the server handle messages that are out of order(e.g. /say before a client has logged in)? yes/no
+*Yes; checks for various conditions and sends appropriate error messages to client
